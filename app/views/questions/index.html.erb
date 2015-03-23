@@ -1,0 +1,11 @@
+<h1> Questions.  About Space cats </h1>
+
+<%= link_to "Submit New Space Cat Question", new_question_path(@question) %>
+
+<% @questions.each do |question| %>
+<h3><%= link_to question.question_name, question_path(question.id) %></h3>
+<h6> by ID: <%= question.user_id %> </h6>
+<p> <%= question.description %> </p>
+<div>&nbsp;</div>
+
+<% end %>
